@@ -3,7 +3,6 @@
 Copia cada imagen en la ruta indicada (respetando carpetas y nombre) y ejecuta `python3 src/build.py`.
 Así las fotos conservan exactamente la misma URL que tenían en la web antigua.
 
-- [ ] `wp-content/uploads/2024/07/blanco.png`
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa.jpg`
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa02.jpeg`
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa3.jpg`
@@ -19,6 +18,7 @@ Así las fotos conservan exactamente la misma URL que tenían en la web antigua.
 - [x] `wp-content/uploads/2024/07/actividades-en-el-campamento-artes-escenicas.jpeg`
 - [x] `wp-content/uploads/2024/07/actividades-en-el-campamento-sport-coaching.jpeg`
 - [x] `wp-content/uploads/2024/07/actividades-outdoor-and-adventure.jpeg`
+- [x] `wp-content/uploads/2024/07/blanco.png`
 - [x] `wp-content/uploads/2024/07/chinatown-4582511_1280.jpg`
 - [x] `wp-content/uploads/2024/07/escritorio-de-trabajo.jpg`
 - [x] `wp-content/uploads/2024/07/hagamos-numeros-principal.jpeg`

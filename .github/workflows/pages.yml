@@ -1,0 +1,44 @@
+# Publica la web en GitHub Pages en cada cambio de la rama main.
+# - Sin archivo CNAME: vista previa en https://<usuario>.github.io/aventuraenusa/ (no indexable)
+# - Con archivo CNAME (aventuraenusa.es): web definitiva en la raíz del dominio
+name: Publicar web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generar HTML
+        run: |
+          if [ -f CNAME ]; then export BASE_PATH=""; else export BASE_PATH="/${GITHUB_REPOSITORY#*/}"; fi
+          echo "BASE_PATH=$BASE_PATH"
+          python3 src/build.py
+      - name: Preparar archivos
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'src' --exclude '_site' --exclude 'README.md' --exclude 'IMAGENES.md' ./ _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

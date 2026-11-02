@@ -1,0 +1,62 @@
+<!--meta {
+  "title": "Contacto - Aventura en USA",
+  "description": "Aventura en USA Valencia, Comunidad Valenciana, España Tel. (+34) 672 852 975 Horario: L-V: 8:00-18:00 info@aventuraenusa.es",
+  "path": "/contacto/",
+  "nav": "contacto",
+  "reading": "3 minutos",
+  "lastmod": "2026-02-26",
+  "breadcrumb": [["Inicio", "/"], ["Contacto", "/contacto/"]]
+} -->
+<section class="section">
+  <div class="container contact-grid">
+    <div class="spacer"></div>
+    <div>
+      <h1>Contáctanos</h1>
+      <form id="contact-form" data-endpoint="https://formsubmit.co/ajax/info@aventuraenusa.es" novalidate>
+        <div class="form-msg" role="status" aria-live="polite"></div>
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde aventuraenusa.es">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-field"><label for="f-nombre">Nombre <abbr title="obligatorio">*</abbr></label><input id="f-nombre" type="text" name="Nombre" required autocomplete="name"></div>
+        <div class="form-field"><label for="f-tel">Teléfono <abbr title="obligatorio">*</abbr></label><input id="f-tel" type="tel" name="Teléfono" required autocomplete="tel"></div>
+        <div class="form-field"><label for="f-email">Correo electrónico <abbr title="obligatorio">*</abbr></label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="form-field"><label for="f-asunto">Asunto <abbr title="obligatorio">*</abbr></label><input id="f-asunto" type="text" name="Asunto" required></div>
+        <div class="form-field"><label for="f-msg">Mensaje <abbr title="obligatorio">*</abbr></label><textarea id="f-msg" name="Mensaje" required></textarea></div>
+        <label class="form-check"><input type="checkbox" name="Consentimiento privacidad" value="Sí" required><span>✓ Consiento el uso de mis datos para los fines indicados en la <a href="/politica-de-privacidad/">política de privacidad</a> <abbr title="obligatorio" style="color:var(--blue);text-decoration:none">*</abbr></span></label>
+        <label class="form-check"><input type="checkbox" name="Consentimiento publicidad" value="Sí"><span>✉ Consiento el uso de mis datos personales para recibir publicidad de su entidad.</span></label>
+        <div class="form-field"><label for="f-verif">Para mayor seguridad, responde la siguiente pregunta <abbr title="obligatorio">*</abbr></label><input id="f-verif" type="text" name="verificacion" placeholder="1 + 4 = ?" required inputmode="numeric"></div>
+        <button class="btn" type="submit" style="padding:16px 48px">Enviar</button>
+      </form>
+
+      <div class="toggles boxed blue-title" style="margin-top:40px">
+        <details class="toggle"><summary>Información básica de protección de datos</summary><div class="toggle-body">
+          <table class="data-table">
+            <tr><th>Responsable del tratamiento</th><td>MOVE ABROAD EXPERIENCE SL</td></tr>
+            <tr><th>Dirección del responsable</th><td>Conde Salvatierra 21, Pta. 4, 46004, Valencia (Valencia, España)</td></tr>
+            <tr><th>Finalidad</th><td>Sus datos serán usados para poder atender sus solicitudes y prestarle nuestros servicios.</td></tr>
+            <tr><th>Publicidad</th><td>Solo le enviaremos publicidad con su autorización previa, que podrá facilitarnos mediante la casilla correspondiente establecida al efecto.</td></tr>
+            <tr><th>Legitimación</th><td>Únicamente trataremos sus datos con su consentimiento previo, que podrá facilitarnos mediante la casilla correspondiente establecida al efecto.</td></tr>
+            <tr><th>Destinatarios</th><td>Con carácter general, sólo el personal de nuestra entidad que esté debidamente autorizado podrá tener conocimiento de la información que le pedimos.</td></tr>
+            <tr><th>Derechos</th><td>Tiene derecho a saber qué información tenemos sobre usted, corregirla y eliminarla, tal y como se explica en la información adicional disponible en nuestra página web.</td></tr>
+            <tr><th>Información adicional</th><td>Más información en el apartado “<a href="/politica-de-privacidad/">Política de privacidad</a>” de nuestra página web.</td></tr>
+          </table>
+        </div></details>
+      </div>
+    </div>
+    <div class="contact-info">
+      <h3>Aventura en USA</h3>
+      <ul>
+        <li>Valencia, Comunidad Valenciana, España</li>
+        <li>Tel. <a href="tel:+34672852975">(+34) 672 852 975</a></li>
+        <li>Horario:<br>&nbsp; L-V: 8:00-18:00</li>
+        <li><a href="mailto:info@aventuraenusa.es">info@aventuraenusa.es</a></li>
+      </ul>
+      <a class="btn btn-green" href="https://api.whatsapp.com/send?phone=34672852975" target="_blank" rel="noopener">{{icon:whatsapp}} Whatsapp (+34) 672 852 975</a>
+      <a class="btn" href="tel:+34672852975">{{icon:phone}} Llamar (+34) 672 852 975</a>
+      <div class="map-consent" style="height:300px" data-map-src="https://maps.google.com/maps?q=Valencia%2C%20Espa%C3%B1a&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
+        <span>Para la correcta visualización, debe aceptar las cookies.</span>
+        <button type="button" data-accept-cookies>Aceptar y mostrar el mapa</button>
+      </div>
+    </div>
+  </div>
+</section>

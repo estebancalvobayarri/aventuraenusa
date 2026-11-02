@@ -1,0 +1,387 @@
+/* ==========================================================================
+   Aventura en USA — réplica estática de aventuraenusa.es
+   Paleta y tipografías extraídas de la web original (tema Enfold)
+   ========================================================================== */
+:root{
+  --navy:#154579;          /* titulares y texto principal */
+  --navy-dark:#30305b;     /* footer y franja de iconos */
+  --blue:#1194db;          /* botones y enlaces */
+  --blue-light:#62c2f9;    /* menú activo */
+  --green:#178740;         /* botón WhatsApp */
+  --alt-bg:#ecfbff;        /* secciones alternas azul claro */
+  --card-bg:#fcfcfc;
+  --border:#e1e1e1;
+  --text:#444;
+  --muted:#919191;
+  --socket:#333;
+  --topbar:#eeeeee;
+  --font-head:"Cabin",Helvetica,Arial,sans-serif;
+  --font-body:Helvetica,Arial,sans-serif;
+  --container:1210px;
+  --header-h:88px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:17px;line-height:1.65;color:var(--text);background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-decoration:none;transition:color .2s}
+a:hover{color:var(--navy)}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-head);color:var(--navy);font-weight:400;margin:0 0 .6em;line-height:1.1;letter-spacing:.5px}
+h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}h4{font-size:18px}
+p{margin:0 0 .85em}
+ul{margin:0 0 1em;padding-left:1.2em}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;padding:8px 12px;z-index:9999}
+.skip-link:focus{left:8px}
+
+/* --------------------------------------------------------------------------
+   Barra superior + cabecera
+   -------------------------------------------------------------------------- */
+.site-header{position:sticky;top:0;z-index:100;width:100%}
+.topbar{background:var(--topbar);font-size:11px;font-weight:700;color:#777;line-height:30px;height:30px}
+.topbar .container{display:flex;justify-content:space-between}
+.header-main{background:linear-gradient(#fff,#f2f2f2);border-bottom:1px solid #e1e1e1;transition:all .3s}
+.header-main .container{display:flex;align-items:center;justify-content:space-between;height:118px;transition:height .3s}
+.logo img,.logo .img-ph{width:95px;height:95px;transition:all .3s}
+.logo .img-ph{border-radius:50%}
+.is-scrolled .header-main .container{height:58px}
+.is-scrolled .logo img,.is-scrolled .logo .img-ph{width:48px;height:48px}
+.is-scrolled .logo .img-ph span{display:none}
+
+.main-nav{display:flex;align-items:center;height:100%}
+.main-nav>ul{display:flex;list-style:none;margin:0;padding:0;height:100%;align-items:stretch}
+.main-nav>ul>li{position:relative;display:flex;align-items:center}
+.main-nav>ul>li>a{display:flex;align-items:center;height:100%;padding:0 13px;font-size:13px;font-weight:600;color:#666;position:relative}
+.main-nav>ul>li>a:hover{color:var(--blue-light)}
+.main-nav>ul>li.current>a{color:var(--blue-light)}
+.main-nav>ul>li.current>a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--navy)}
+.main-nav .nav-cta{margin-left:13px}
+.main-nav>ul>li.nav-cta>a{height:auto;background:var(--navy);color:#fff!important;font-size:13px;font-weight:700;padding:9px 11px;border-radius:2px;display:inline-block;line-height:1.4}
+.main-nav .nav-cta a:hover{background:var(--blue)}
+.sub-menu{list-style:none;margin:0;padding:0;position:absolute;top:100%;left:0;min-width:208px;background:#fff;border:1px solid #e1e1e1;border-top:2px solid var(--navy);box-shadow:0 8px 15px rgba(0,0,0,.08);opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s}
+.has-sub:hover .sub-menu,.has-sub:focus-within .sub-menu{opacity:1;visibility:visible;transform:none}
+.sub-menu a{display:block;padding:9px 15px;font-size:12px;color:#666;border-bottom:1px solid #f0f0f0}
+.sub-menu a:hover,.sub-menu .current a{background:#f8f8f8;color:var(--blue)}
+.search-btn,.menu-toggle{background:none;border:0;cursor:pointer;color:#666;padding:8px 12px;display:flex;align-items:center}
+.search-btn svg{width:15px;height:15px}
+.menu-toggle{display:none}
+.menu-toggle svg{width:26px;height:26px}
+
+/* Cabecera transparente sobre el hero (portada) */
+.header-transparent .site-header{position:fixed}
+.header-transparent:not(.is-scrolled) .topbar{background:transparent;color:#fff}
+.header-transparent:not(.is-scrolled) .header-main{background:transparent;border-color:transparent}
+.header-transparent:not(.is-scrolled) .main-nav>ul>li>a,
+.header-transparent:not(.is-scrolled) .search-btn,
+.header-transparent:not(.is-scrolled) .menu-toggle{color:#fff}
+.header-transparent:not(.is-scrolled) .main-nav>ul>li.current>a::after{background:#fff}
+.header-transparent:not(.is-scrolled) .logo img{filter:drop-shadow(0 0 2px rgba(0,0,0,.15))}
+.is-scrolled .site-header .header-main{background:rgba(255,255,255,.96)}
+
+/* --------------------------------------------------------------------------
+   Secciones
+   -------------------------------------------------------------------------- */
+.section{padding:50px 0;position:relative;color:var(--navy)}
+.section.alt{background:var(--alt-bg)}
+.section.dark{background:var(--navy-dark);color:#fff}
+.section.dark h1,.section.dark h2,.section.dark h3{color:#fff}
+.section.pad-lg{padding:80px 0}
+.section.center{text-align:center}
+.section-title{text-align:center;margin-bottom:40px}
+.heading-line{display:flex;align-items:center;gap:15px;margin-bottom:45px}
+.heading-line h2{margin:0;flex:0 0 auto}
+.heading-line::after{content:"";flex:1;height:1px;background:#e1e1e1;margin-top:6px}
+
+.cols{display:grid;gap:6%;align-items:start}
+.cols.middle{align-items:center}
+.cols-2{grid-template-columns:1fr 1fr}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-1-2{grid-template-columns:1fr 1.5fr}       /* 1/3 + 1/2 */
+.col-center-3-5{max-width:60%;margin:0 auto}
+.col-center-2-5{max-width:40%;margin:0 auto}
+
+/* Hero de páginas interiores */
+.page-hero{position:relative;min-height:565px;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center;overflow:hidden}
+.page-hero h1{color:#fff;font-size:34px;letter-spacing:1px;text-shadow:0 1px 6px rgba(0,0,0,.18);position:relative;z-index:2;margin:0}
+.page-hero h2{color:#fff;font-size:28px;position:relative;z-index:2;margin:20px 0 0;letter-spacing:1px}
+.page-hero .hero-inner{position:relative;z-index:2;padding:0 20px}
+
+/* Hero portada */
+.home-hero{min-height:min(100vh,1000px);display:flex;align-items:center;background-size:cover;background-position:center;position:relative}
+.home-hero .container{width:100%;position:relative;z-index:2}
+.home-hero .hero-text{max-width:60%;padding-top:90px}
+.home-hero h1{color:#fff;font-size:34px;font-weight:300;letter-spacing:1px;margin-bottom:60px}
+.home-hero h2{color:#fff;font-size:28px;font-weight:300;letter-spacing:1px;line-height:1.1}
+
+/* Sección presentación portada con fondo de Nueva York */
+.intro{background-size:cover;background-position:center bottom;position:relative;text-align:center}
+.intro::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.82)}
+.intro>.container{position:relative}
+.intro .intro-logo{width:290px;max-width:60%;margin:0 auto 70px}
+.intro .intro-logo.img-ph{aspect-ratio:1;border-radius:50%}
+.intro .intro-text{max-width:60%;margin:0 auto}
+.intro h1{font-size:34px;margin-bottom:30px}
+.intro strong{color:var(--blue)}
+.intro .btn-stack{display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:45px}
+
+/* Franja de círculos con iconos */
+.icon-circles{padding:80px 0}
+.icon-circles .cols-3{text-align:center}
+.icon-circle{display:inline-flex;flex-direction:column;align-items:center;color:#fff;font-family:var(--font-head);font-size:17px;text-transform:uppercase;letter-spacing:.3px;transition:transform .3s}
+.icon-circle:hover{color:#fff;transform:scale(1.04)}
+.icon-circle .circle{width:135px;height:135px;border:3px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:15px}
+.icon-circle svg{width:56px;height:56px;fill:#fff}
+
+/* Cajas con icono (iconbox) */
+.iconbox{background:var(--card-bg);border:1px solid #eee;border-radius:3px;padding:52px 20px 25px;text-align:center;position:relative;margin-top:27px}
+.iconbox .ib-icon{position:absolute;top:-27px;left:50%;transform:translateX(-50%);width:53px;height:53px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center}
+.iconbox .ib-icon svg{width:20px;height:20px;fill:#fff}
+.iconbox h2,.iconbox h3{font-size:24px;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px;line-height:1.05}
+.iconbox h2.price{text-transform:none;font-size:24px}
+.iconbox p{margin:0 0 .6em}
+.iconbox .hl{color:var(--blue);font-weight:700}
+.iconbox-wrap{max-width:356px;margin:0 auto}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--blue);color:#fff;font-size:15px;line-height:1.2;padding:15px 44px;border-radius:3px;border:0;cursor:pointer;font-family:var(--font-body);transition:opacity .2s,background .2s}
+.btn:hover{color:#fff;opacity:.85}
+.btn-navy{background:var(--navy)}
+.btn-green{background:var(--green)}
+.btn-lg{font-size:17px;padding:21px 50px;min-width:308px}
+.btn-outline{background:transparent;border:3px solid #666;color:#444;padding:12px 30px}
+.btn-outline:hover{color:#fff;background:#666;opacity:1}
+.btn svg{width:15px;height:15px;fill:currentColor}
+.btn-row{margin-top:30px}
+.center .btn-row{text-align:center}
+
+/* Bloques de texto + imagen alternos */
+.split h2{margin-bottom:55px}
+.split p{color:var(--navy)}
+.split .media img,.split .media .img-ph{border-radius:3px;width:100%}
+.split .text{padding-top:25px}
+
+/* Llamada a la acción final */
+.cta{text-align:center;padding:55px 0 60px}
+.cta h2{font-size:34px;margin-bottom:40px}
+.cta .note{font-size:13px;color:var(--muted);margin-top:30px}
+
+/* Listas con negritas azules */
+.hl-list{margin:0;padding-left:20px}
+.hl-list li{margin-bottom:10px;color:var(--navy)}
+.hl-list strong,.text-hl{color:var(--blue);font-weight:700}
+
+/* Galería (tres imágenes) */
+.gallery-3{display:grid;grid-template-columns:repeat(3,1fr);gap:6%;margin-top:40px}
+.gallery-3 img,.gallery-3 .img-ph{width:100%;border-radius:3px}
+
+/* --------------------------------------------------------------------------
+   Toggles / acordeones
+   -------------------------------------------------------------------------- */
+.toggles{border-top:1px solid var(--border)}
+.toggle{border-bottom:1px solid var(--border)}
+.toggle>summary{list-style:none;cursor:pointer;padding:30px 70px 30px 36px;position:relative;color:var(--navy);font-size:17px}
+.toggle>summary::-webkit-details-marker{display:none}
+.toggle>summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:1px solid #e1e1e1;border-radius:50%;color:#ccc;display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1;transition:all .2s}
+.toggle[open]>summary::after{content:"−";color:var(--blue);border-color:var(--blue)}
+.toggle>summary:hover{color:var(--blue)}
+.toggle .toggle-body{padding:0 36px 25px;color:var(--navy)}
+/* Variante caja con + a la izquierda (actividades, historias, contacto) */
+.toggles.boxed{border:1px solid var(--border);border-bottom:0}
+.toggles.boxed .toggle>summary{padding:10px 15px 10px 35px;font-size:17px}
+.toggles.boxed .toggle>summary::after{right:auto;left:10px;width:14px;height:14px;border-radius:0;border:1px solid #ddd;font-size:12px}
+.toggles.boxed .toggle .toggle-body{padding:5px 15px 15px 35px;font-size:16px}
+.toggle .skills{font-size:14px;color:#666;display:flex;flex-wrap:wrap;gap:6px 8px;margin-top:10px}
+.toggle .skills span{background:#f4f4f4;border:1px solid #e8e8e8;border-radius:2px;padding:2px 8px}
+.toggles.boxed.blue-title .toggle>summary{color:var(--blue);font-weight:700;font-size:20px;text-transform:uppercase;padding-top:14px;padding-bottom:14px}
+
+/* --------------------------------------------------------------------------
+   Línea temporal (El día a día)
+   -------------------------------------------------------------------------- */
+.timeline{position:relative;max-width:1210px;margin:40px auto 0}
+.tl-item{display:grid;grid-template-columns:1fr 82px 1fr;gap:0 64px;position:relative;padding-bottom:50px}
+.tl-item::before{content:"";position:absolute;left:50%;top:90px;bottom:10px;border-left:1px dashed #ddd}
+.tl-item:last-child::before{display:none}
+.tl-dot{width:82px;height:82px;border-radius:50%;background:#c4c4cf;display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:1}
+.tl-dot svg{width:26px;height:26px;fill:#fff}
+.tl-time{font-family:var(--font-head);font-size:28px;color:#bbb;padding-top:20px}
+.tl-content{padding-top:24px;color:var(--navy)}
+.tl-content h4{font-family:var(--font-head);font-size:17px;margin-bottom:15px}
+.tl-item:nth-child(odd) .tl-time{grid-column:1;grid-row:1;text-align:right}
+.tl-item:nth-child(odd) .tl-content{grid-column:3;grid-row:1}
+.tl-item:nth-child(even) .tl-content{grid-column:1;grid-row:1;text-align:right}
+.tl-item:nth-child(even) .tl-time{grid-column:3;grid-row:1}
+
+/* --------------------------------------------------------------------------
+   Sliders (testimonios y galerías)
+   -------------------------------------------------------------------------- */
+.slider{position:relative}
+.slider .slides{position:relative}
+.slider .slide{display:none}
+.slider .slide.active{display:block;animation:fade .6s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.slider .nav-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:3px;background:rgba(0,0,0,.25);color:#fff;cursor:pointer;opacity:0;transition:opacity .2s;z-index:3;display:flex;align-items:center;justify-content:center}
+.slider:hover .nav-arrow{opacity:1}
+.slider .nav-arrow.prev{left:10px}.slider .nav-arrow.next{right:10px}
+.slider .nav-arrow svg{width:18px;height:18px;fill:#fff}
+.slider .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.slider .dots button{width:10px;height:10px;border-radius:50%;border:1px solid #bbb;background:transparent;padding:0;cursor:pointer}
+.slider .dots button.active{background:var(--blue);border-color:var(--blue)}
+.image-slider .slide img,.image-slider .slide .img-ph{width:100%;border-radius:3px}
+
+.testimonials{padding:80px 0 60px}
+.testimonial .t-box{background:#f8fdff;border:1px solid var(--border);padding:15px;color:#4e6c87;font-size:17px;position:relative}
+.testimonial .t-box::after{content:"";position:absolute;left:30px;bottom:-9px;width:16px;height:16px;background:#f8fdff;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transform:rotate(45deg)}
+.testimonial .t-meta{padding:20px 0 0 20px;line-height:1.2}
+.testimonial .t-name{display:block;font-weight:700;color:#4e6c87;font-size:15px}
+.testimonial .t-handle{display:block;font-size:12px;color:var(--muted)}
+.testimonials .nav-arrow{background:rgba(21,69,121,.35)}
+
+/* --------------------------------------------------------------------------
+   Formulario de contacto
+   -------------------------------------------------------------------------- */
+.contact-grid{display:grid;grid-template-columns:1fr 2fr 2fr;gap:6%}
+.form-field{margin-bottom:20px}
+.form-field label{display:block;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:6px}
+.form-field label abbr{color:var(--blue);text-decoration:none}
+.form-field input[type=text],.form-field input[type=tel],.form-field input[type=email],.form-field textarea{width:100%;background:#fafafa;border:1px solid var(--border);padding:13px 10px;font-size:14px;font-family:inherit;color:#333;border-radius:0}
+.form-field textarea{min-height:205px;resize:vertical}
+.form-field input:focus,.form-field textarea:focus{outline:none;border-color:var(--blue);background:#fff}
+.form-check{display:flex;gap:10px;align-items:flex-start;font-weight:700;color:var(--navy);font-size:16px;margin-bottom:25px;line-height:1.75}
+.form-check input{margin-top:7px}
+.form-msg{padding:12px 15px;border-radius:3px;margin-bottom:20px;font-size:15px;display:none}
+.form-msg.ok{display:block;background:#e5f6ea;color:#1c6b37}
+.form-msg.err{display:block;background:#fdeaea;color:#a12a2a}
+.contact-info h3{font-family:var(--font-body);font-weight:700;color:var(--blue);font-size:15px;margin-bottom:15px}
+.contact-info ul{list-style:none;padding:0 0 0 5px;font-size:15px;color:var(--navy)}
+.contact-info li{margin-bottom:14px}
+.contact-info .btn{width:100%;max-width:308px;justify-content:center;margin-bottom:25px;padding:21px 20px}
+.data-table{width:100%;border-collapse:collapse;font-size:14px}
+.data-table th,.data-table td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+.data-table th{width:38%;background:#f8f8f8;color:var(--navy)}
+
+/* Mapa con consentimiento */
+.map-consent{background:#e9eef3;border:1px solid #d6dde4;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px;font-size:13px;color:#555;gap:10px}
+.map-consent button{background:var(--blue);color:#fff;border:0;padding:8px 14px;border-radius:3px;cursor:pointer;font-size:13px}
+.map-frame{width:100%;border:0;display:block}
+
+/* --------------------------------------------------------------------------
+   Pie de página
+   -------------------------------------------------------------------------- */
+.site-footer{background:var(--navy-dark);color:#ddd;padding:45px 0 50px}
+.site-footer a{color:#fff}
+.site-footer a:hover{color:var(--blue-light)}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6%}
+.site-footer h3{font-family:var(--font-body);color:#ddd;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:20px 0 22px}
+.site-footer .f-pages ul{list-style:none;padding:0;margin:0}
+.site-footer .f-pages li{line-height:28px}
+.site-footer .f-contact strong{color:#fff;display:block;font-size:17px;margin:18px 0 18px}
+.site-footer .f-contact ul{list-style:none;padding:0;margin:0}
+.site-footer .f-contact li{margin-bottom:20px}
+.site-footer .map-frame,.site-footer .map-consent{height:150px}
+.socket{background:var(--socket);color:#eee;font-size:11px;line-height:1.5;padding:9px 0}
+.socket a{color:#eee}
+
+/* Volver arriba */
+.to-top{position:fixed;right:50px;bottom:50px;width:50px;height:50px;background:rgba(0,0,0,.3);border-radius:2px;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s;z-index:90}
+.to-top.show{opacity:1;visibility:visible}
+.to-top svg{width:14px;height:14px;fill:#fff}
+
+/* --------------------------------------------------------------------------
+   Aviso de cookies
+   -------------------------------------------------------------------------- */
+.cookie-bar{position:fixed;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);color:#fff;font-size:14px;z-index:200;padding:16px 20px;display:none}
+.cookie-bar.show{display:block}
+.cookie-bar .cb-inner{max-width:1210px;margin:0 auto;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cookie-bar p{margin:0;flex:1 1 500px}
+.cookie-bar a{color:var(--blue-light)}
+.cookie-bar .cb-actions{display:flex;gap:8px;flex-wrap:wrap}
+.cookie-bar button{border:0;border-radius:3px;padding:9px 16px;cursor:pointer;font-size:13px}
+.cb-accept{background:var(--blue);color:#fff}
+.cb-reject{background:#666;color:#fff}
+.cookie-lock{position:fixed;left:0;bottom:50px;width:30px;height:30px;background:rgba(0,0,0,.6);border:0;cursor:pointer;z-index:95;display:flex;align-items:center;justify-content:center}
+.cookie-lock svg{width:12px;height:12px;fill:#fff}
+
+/* --------------------------------------------------------------------------
+   Buscador
+   -------------------------------------------------------------------------- */
+.search-overlay{position:fixed;inset:0;background:rgba(255,255,255,.97);z-index:300;display:none;padding:120px 20px 40px;overflow:auto}
+.search-overlay.show{display:block}
+.search-overlay .so-inner{max-width:760px;margin:0 auto}
+.search-overlay input{width:100%;font-size:26px;border:0;border-bottom:2px solid var(--navy);padding:10px 0;background:transparent;color:var(--navy);font-family:var(--font-head);outline:none}
+.search-overlay .so-close{position:absolute;right:30px;top:30px;background:none;border:0;font-size:38px;cursor:pointer;color:#666;line-height:1}
+.search-results{list-style:none;padding:0;margin:25px 0 0}
+.search-results li{padding:14px 0;border-bottom:1px solid #eee}
+.search-results a{font-family:var(--font-head);font-size:20px}
+.search-results p{margin:4px 0 0;font-size:14px;color:#666}
+
+/* --------------------------------------------------------------------------
+   Páginas legales
+   -------------------------------------------------------------------------- */
+.legal{padding:50px 0 70px;color:var(--text)}
+.legal .container{max-width:1210px}
+.legal h1{margin-bottom:30px}
+.legal h2{font-size:22px;margin-top:30px}
+.legal h3{font-size:18px;margin-top:22px}
+.legal table{width:100%;border-collapse:collapse;font-size:13px;margin:20px 0}
+.legal th,.legal td{border:1px solid var(--border);padding:8px;vertical-align:top;text-align:left}
+.legal th{background:#f6f6f6}
+
+/* --------------------------------------------------------------------------
+   Huecos de imagen (se sustituyen automáticamente al añadir las fotos)
+   -------------------------------------------------------------------------- */
+.img-ph{background:repeating-linear-gradient(45deg,#eef3f8,#eef3f8 12px,#e4ebf2 12px,#e4ebf2 24px);border:2px dashed #b7c6d6;display:flex;align-items:center;justify-content:center;text-align:center;color:#5d7894;font-size:12px;line-height:1.3;padding:10px;overflow:hidden;word-break:break-all}
+.img-ph span{background:rgba(255,255,255,.75);padding:4px 8px;border-radius:3px}
+.bg-ph{background-color:#5b7fa6!important;background-image:linear-gradient(135deg,#30305b 0%,#154579 55%,#1194db 100%)!important}
+.bg-ph-light{background-color:#e9eef3!important}
+.bg-label{position:absolute;right:12px;bottom:10px;z-index:3;background:rgba(255,255,255,.8);color:#30305b;font-size:11px;padding:3px 8px;border-radius:3px}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width:989px){
+  .menu-toggle{display:flex}
+  .main-nav>ul{display:none}
+  .main-nav.open>ul{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:#fff;height:auto;border-top:1px solid #eee;box-shadow:0 10px 20px rgba(0,0,0,.1);padding:10px 0;max-height:calc(100vh - 100px);overflow:auto}
+  .main-nav.open>ul>li{display:block}
+  .main-nav.open>ul>li>a{color:#555!important;padding:12px 25px;height:auto}
+  .main-nav.open>ul>li.current>a::after{display:none}
+  .main-nav.open .sub-menu{position:static;opacity:1;visibility:visible;transform:none;border:0;box-shadow:none;padding-left:20px}
+  .main-nav.open .nav-cta{margin:10px 25px}
+  .header-main .container{height:90px;position:relative}
+  .logo img,.logo .img-ph{width:70px;height:70px}
+  .cols-2,.cols-3,.cols-1-2,.contact-grid,.footer-grid,.gallery-3{grid-template-columns:1fr;gap:35px}
+  .contact-grid .spacer{display:none}
+  .col-center-3-5,.col-center-2-5,.intro .intro-text{max-width:100%}
+  .home-hero .hero-text{max-width:100%}
+  .page-hero{min-height:360px}
+  .split .media{order:-1}
+  .split h2{margin-bottom:25px}
+  .tl-item{grid-template-columns:60px 1fr;gap:0 20px}
+  .tl-item::before{left:30px}
+  .tl-dot{grid-column:1!important;width:60px;height:60px}
+  .tl-item .tl-time,.tl-item .tl-content{grid-column:2!important;text-align:left!important}
+  .tl-item .tl-time{grid-row:1!important;padding-top:10px}
+  .tl-item .tl-content{grid-row:2!important;padding-top:5px}
+  .to-top{right:15px;bottom:15px}
+  .btn-lg{min-width:0;width:100%;max-width:340px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  h1,.page-hero h1,.home-hero h1,.cta h2{font-size:28px}
+  h2,.home-hero h2{font-size:23px}
+  .topbar{display:none}
+  .section{padding:40px 0}
+  .icon-circles{padding:50px 0}
+  .toggle>summary{padding:20px 55px 20px 10px}
+  .toggle .toggle-body{padding:0 10px 20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Inscripción: pasos numerados con captura */
+.step-list{list-style:none;counter-reset:paso;padding:0;margin:50px auto 40px;max-width:900px}
+.step-list>li{counter-increment:paso;position:relative;padding:0 0 45px 60px;color:var(--navy)}
+.step-list>li::before{content:counter(paso);position:absolute;left:0;top:-4px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-head);font-size:18px;display:flex;align-items:center;justify-content:center}
+.step-list img,.step-list .img-ph{width:100%;border:1px solid var(--border);border-radius:3px;margin-top:10px}
+.steps-intro p{color:var(--navy)}
+@media (max-width:600px){.step-list>li{padding-left:50px}}

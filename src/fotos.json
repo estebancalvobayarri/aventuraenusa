@@ -1,0 +1,45 @@
+{
+  "_comentario": "Qué foto de la carpeta fotos/ se usa para cada imagen de la web. Clave = ruta final (la misma URL que en la web antigua). Valor = archivo dentro de fotos/. Tras cambiarlo, ejecuta: python3 src/fotos.py && python3 src/build.py",
+  "wp-content/uploads/2024/07/vive-la-experiencia-buena.jpg": "vive la experiencia buena.jpeg",
+  "wp-content/uploads/2024/07/nyc-4854718_1280.jpg": "vive la experiencia, viaja y disfruta copia.jpeg",
+  "wp-content/uploads/2024/07/vive-la-experiencia-o-tu-aventura-empieza-aqui.jpeg": "vive la experiencia o tu aventura empieza aquí.jpeg",
+
+  "wp-content/uploads/2024/07/vive-la-experiencia-el-verano-de-tu-vida-scaled-1.webp": "vive la experiencia, el verano de tu vida.jpg",
+  "wp-content/uploads/2024/07/pexels-hilmi-isilak-11183447-scaled-2.webp": "principal haz lo q mas te guste.jpeg",
+  "wp-content/uploads/2024/09/vive-la-experiencia-perfecciona-tu-ingles.jpeg": "vive la experiencia perfecciona tu inglés.jpeg",
+  "wp-content/uploads/2024/07/vive-la-experiencia-impulsa-tu-carrera-profesional.webp": "vive la experiencia, impulsa tu carrera profesional.jpeg",
+  "wp-content/uploads/2024/07/actividades-del-campamento-waterfront.jpeg": "actividades del campamento, waterfront.jpeg",
+  "wp-content/uploads/2024/07/vive-la-experiencia-viaja-y-disfruta-1024x604-1-495x400.webp": "vive la experiencia, viaja y disfruta.jpeg",
+  "wp-content/uploads/2024/07/vive-la-experiencia-viaja-y-disfruta-copia-1024x683-1-495x400.webp": "vive la experiencia, viaja y disfruta copia.jpeg",
+  "wp-content/uploads/2024/07/pexels-anand-dandekar-829237-scaled-e1651138665940-768x512-1-495x400.webp": "vive la experiencia, viaja y disfruta copia 2.jpeg",
+
+  "wp-content/uploads/2024/07/pexels-hilmi-isilak-11183447-scaled-1.webp": "actividades en el campamento principal.jpeg",
+  "wp-content/uploads/2024/07/pexels-davyd-bortnik-3058762-scaled-1.webp": "El dia a dia, no hay dos campamentos iguales copia.jpeg",
+  "wp-content/uploads/2024/07/maestros-ninos-mirando-hojas.jpg": "maestros-ninos-mirando-hojas.jpg",
+  "wp-content/uploads/2024/07/actividades-arts-and-crafts.jpeg": "actividades arts and crafts.jpeg",
+  "wp-content/uploads/2024/07/actividades-en-el-campamento-artes-escenicas.jpeg": "actividades en el campamento, artes escénicas.jpeg",
+  "wp-content/uploads/2024/07/actividades-en-el-campamento-sport-coaching.jpeg": "actividades en el campamento, sport coaching.jpeg",
+  "wp-content/uploads/2024/07/actividades-outdoor-and-adventure.jpeg": "actividades outdoor and adventure.jpeg",
+  "wp-content/uploads/2024/07/ninos-sonrientes-tiro-completo-sentados-juntos.jpg": "ninos-sonrientes-tiro-completo-sentados-juntos.jpg",
+
+  "wp-content/uploads/2024/07/El-dia-a-dia-principal.jpeg": "El día a día principal.jpeg",
+  "wp-content/uploads/2024/07/luke-porter-mGFJIUD9yiM-unsplash-scaled-1.webp": "El dia a dia, no hay dos campamentos iguales.jpeg",
+  "wp-content/uploads/2024/07/EL-PROGRAMA.jpeg": "¿EL PROGRAMA.jpeg",
+  "wp-content/uploads/2024/07/hagamos-numeros-principal.jpeg": "hagamos números principal.jpeg",
+
+  "wp-content/uploads/2026/09/Captura_2-scaled.jpg": "Captura_2.jpg",
+  "wp-content/uploads/2026/09/Captura_3-scaled.jpg": "Captura_3.jpg",
+  "wp-content/uploads/2026/09/Captura_4-scaled.jpg": "Captura_4.jpg",
+  "wp-content/uploads/2026/09/Captura_5-scaled.jpg": "Captura_5.jpg",
+  "wp-content/uploads/2026/09/Captura_6-scaled.jpg": "Captura_6.jpg",
+  "wp-content/uploads/2026/09/Captura_CCUSA_borde-scaled.jpg": "Captura_7.jpg",
+  "wp-content/uploads/2026/09/Captura_8-scaled.jpg": "Captura_8.jpg",
+  "wp-content/uploads/2026/09/Captura_9-scaled.jpg": "Captura_9.jpg",
+  "wp-content/uploads/2026/09/Captura_10-scaled.jpg": "Captura_10.jpg",
+  "wp-content/uploads/2026/09/Captura_11-scaled.jpg": "Captura_11.jpg",
+  "wp-content/uploads/2026/09/Captura_12-scaled.jpg": "Captura_12.jpg",
+
+  "wp-content/uploads/2024/07/escritorio-de-trabajo.jpg": "AdobeStock_119503604.jpeg",
+  "wp-content/uploads/2024/07/chinatown-4582511_1280.jpg": "AdobeStock_181296516.jpeg",
+  "wp-content/uploads/2024/07/skyline-4582510_1280.jpg": "AdobeStock_211416872.jpeg"
+}

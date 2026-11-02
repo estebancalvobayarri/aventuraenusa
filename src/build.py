@@ -149,13 +149,27 @@ def img_exists(src):
     return src.startswith("/") and (ROOT / src.lstrip("/")).is_file()
 
 
+def real_size(src):
+    """Dimensiones reales de la foto (si Pillow está instalado)."""
+    try:
+        from PIL import Image
+        with Image.open(ROOT / src.lstrip("/")) as im:
+            return im.size
+    except Exception:
+        return None
+
+
 def replace_img(m):
     attrs = dict(ATTR_RE.findall(m.group(1)))
     src = attrs.get("src", "")
     if not src.startswith("/wp-content/") or img_exists(src):
+        tag = m.group(0)
         if src.startswith("/wp-content/"):
             present_images.add(src)
-        tag = m.group(0)
+            dims = real_size(src)
+            if dims:
+                tag = re.sub(r'width="\d+"', f'width="{dims[0]}"', tag)
+                tag = re.sub(r'height="\d+"', f'height="{dims[1]}"', tag)
         if "loading=" not in tag and "data-eager" not in tag:
             tag = tag.replace("<img", '<img loading="lazy" decoding="async"', 1)
         return tag.replace(" data-eager", "")

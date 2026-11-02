@@ -35,6 +35,7 @@ jobs:
         run: |
           if [ -f CNAME ]; then export BASE_PATH=""; else export BASE_PATH="/${GITHUB_REPOSITORY#*/}"; fi
           echo "BASE_PATH=$BASE_PATH"
+          pip install pillow
           python3 src/build.py
       - name: Preparar archivos
         run: |

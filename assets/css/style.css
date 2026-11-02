@@ -385,3 +385,10 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .step-list img,.step-list .img-ph{width:100%;border:1px solid var(--border);border-radius:3px;margin-top:10px}
 .steps-intro p{color:var(--navy)}
 @media (max-width:600px){.step-list>li{padding-left:50px}}
+
+/* Velo sobre las fotos de cabecera para que el titular se lea bien */
+.page-hero::before,.home-hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}
+.page-hero::before{background:rgba(16,28,56,.28)}
+.home-hero::before{background:linear-gradient(90deg,rgba(16,28,56,.45) 0%,rgba(16,28,56,.15) 55%,rgba(16,28,56,0) 80%)}
+.page-hero h1,.page-hero h2,.home-hero h1,.home-hero h2{text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.header-transparent:not(.is-scrolled) .site-header{background:linear-gradient(rgba(16,28,56,.35),rgba(16,28,56,0))}

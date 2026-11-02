@@ -6,6 +6,9 @@ name: Publicar web
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "fotos/**"
+      - "**.md"
   workflow_dispatch:
 
 permissions:
@@ -36,7 +39,7 @@ jobs:
       - name: Preparar archivos
         run: |
           mkdir -p _site
-          rsync -a --exclude '.git' --exclude '.github' --exclude 'src' --exclude '_site' --exclude 'README.md' --exclude 'IMAGENES.md' ./ _site/
+          rsync -a --exclude '.git' --exclude '.github' --exclude 'src' --exclude 'fotos' --exclude '_site' --exclude 'README.md' --exclude 'IMAGENES.md' ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

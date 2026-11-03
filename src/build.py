@@ -282,7 +282,7 @@ def footer_html():
         <span>Para la correcta visualización, debe aceptar las cookies.</span>
         <button type="button" data-accept-cookies>Aceptar y mostrar el mapa</button>
       </div>
-      <a class="f-credit" href="https://ecwebdesign.es/" target="_blank" rel="noopener"><img src="/assets/img/ecwebdesign.png" alt="Diseño y web: EC Web Design" width="249" height="32"></a>
+      <a class="f-credit" href="https://ecwebdesign.es/" target="_blank" rel="noopener"><img src="/assets/img/ecwebdesign.png" alt="Diseño y web: EC Web Design" width="125" height="16"></a>
     </section>
   </div>
 </footer>

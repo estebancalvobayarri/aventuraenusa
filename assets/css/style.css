@@ -379,12 +379,14 @@ ul{margin:0 0 1em;padding-left:1.2em}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 /* Inscripción: pasos numerados con captura */
-.step-list{list-style:none;counter-reset:paso;padding:0;margin:50px auto 40px;max-width:900px}
-.step-list>li{counter-increment:paso;position:relative;padding:0 0 45px 60px;color:var(--navy)}
-.step-list>li::before{content:counter(paso);position:absolute;left:0;top:-4px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-head);font-size:18px;display:flex;align-items:center;justify-content:center}
-.step-list img,.step-list .img-ph{width:100%;border:1px solid var(--border);border-radius:3px;margin-top:10px}
-.steps-intro p{color:var(--navy)}
-@media (max-width:600px){.step-list>li{padding-left:50px}}
+/* Mismo ancho que la web original: textos y capturas a todo el ancho del contenedor, sin numeración */
+.step-list{list-style:none;padding:0;margin:0}
+.step-list>li{padding:0 0 30px;color:var(--navy)}
+.step-list img,.step-list .img-ph{width:100%;border-radius:3px;margin-top:6px}
+.steps-intro p,.steps-outro p{color:var(--navy)}
+.steps .section-title{margin-bottom:50px}
+/* Subrayado amarillo como en la web original */
+.text-hl.mark{background:#ffff00;color:var(--blue);box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
 /* Velo sobre las fotos de cabecera para que el titular se lea bien */
 .page-hero::before,.home-hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}

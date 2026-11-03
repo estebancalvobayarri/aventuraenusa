@@ -7,7 +7,6 @@ Así las fotos conservan exactamente la misma URL que tenían en la web antigua.
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa02.jpeg`
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa3.jpg`
 - [ ] `wp-content/uploads/2025/09/aventura-en-usa4.jpg`
-- [ ] `wp-content/uploads/2026/09/Captura_1-scaled.jpg`
 
 ## Ya incluidas
 
@@ -38,6 +37,7 @@ Así las fotos conservan exactamente la misma URL que tenían en la web antigua.
 - [x] `wp-content/uploads/2024/07/vive-la-experiencia-viaja-y-disfruta-1024x604-1-495x400.webp`
 - [x] `wp-content/uploads/2024/07/vive-la-experiencia-viaja-y-disfruta-copia-1024x683-1-495x400.webp`
 - [x] `wp-content/uploads/2024/09/vive-la-experiencia-perfecciona-tu-ingles.jpeg`
+- [x] `wp-content/uploads/2026/09/Captura_1-scaled.jpg`
 - [x] `wp-content/uploads/2026/09/Captura_10-scaled.jpg`
 - [x] `wp-content/uploads/2026/09/Captura_11-scaled.jpg`
 - [x] `wp-content/uploads/2026/09/Captura_12-scaled.jpg`

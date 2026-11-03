@@ -447,3 +447,4 @@ ul{margin:0 0 1em;padding-left:1.2em}
 /* Contacto: desplegable de protección de datos a lo ancho de las dos columnas */
 .contact-data{grid-column:2 / 4;margin-top:10px}
 @media (max-width:989px){.contact-data{grid-column:auto}}
+.contact-grid{row-gap:30px}

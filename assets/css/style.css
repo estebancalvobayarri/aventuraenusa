@@ -438,3 +438,8 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .contact-consents .form-field label{font-size:14px}
 .contact-consents .form-field input{max-width:308px}
 .contact-consents .btn{width:auto;margin-bottom:0}
+
+/* Historias: título de la historia en negrita, fondo gris muy suave y línea separadora debajo */
+.toggles.story .toggle>summary{font-weight:700;color:var(--navy);background:#f7f7f7;border-bottom:1px solid #d6d6d6}
+.toggles.story .toggle>summary:hover{color:var(--navy)}
+.toggles.story .toggle .toggle-body{padding-top:18px}

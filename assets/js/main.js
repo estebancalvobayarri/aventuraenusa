@@ -39,6 +39,8 @@
   /* ---------- Sliders (testimonios y galerías) ---------- */
   document.querySelectorAll('[data-slider]').forEach(function (slider) {
     var slides = slider.querySelectorAll('.slide');
+    // Las fotos ocultas del carrusel se descargan ya, para que no aparezca un hueco al pasar de foto
+    slider.querySelectorAll('img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
     if (slides.length < 2) { if (slides[0]) slides[0].classList.add('active'); return; }
     var dotsWrap = slider.querySelector('.dots');
     var current = 0, timer = null;

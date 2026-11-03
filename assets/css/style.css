@@ -404,6 +404,6 @@ ul{margin:0 0 1em;padding-left:1.2em}
 @media (prefers-reduced-motion:reduce){.js-reveal .icon-circles .icon-circle{opacity:1;transform:none;animation:none!important}}
 
 /* Crédito del diseño web en el pie */
-.site-footer .f-credit{display:block;width:max-content;margin:35px 0 0;opacity:.85;transition:opacity .2s}
+.site-footer .f-credit{display:block;width:max-content;margin:35px 0 0 auto;opacity:.85;transition:opacity .2s}
 .site-footer .f-credit:hover{opacity:1}
 .site-footer .f-credit img{height:16px;width:auto}

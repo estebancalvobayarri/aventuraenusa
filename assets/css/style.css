@@ -416,3 +416,7 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .js-reveal .timeline .tl-item.in-view .tl-dot{background:var(--navy-dark)}
 @keyframes tl-fadein{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){.js-reveal .timeline .tl-item{opacity:1;animation:none!important}.js-reveal .timeline .tl-dot{background:var(--navy-dark);transition:none}}
+
+/* Botón de WhatsApp de la portada: solo icono (al doble de tamaño) y número */
+.btn-wa{gap:10px}
+.btn-wa svg{width:30px;height:30px}

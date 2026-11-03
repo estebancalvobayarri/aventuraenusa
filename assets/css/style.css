@@ -443,3 +443,7 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .toggles.story .toggle>summary{font-weight:700;color:var(--navy);background:#f7f7f7;border-bottom:1px solid #d6d6d6}
 .toggles.story .toggle>summary:hover{color:var(--navy)}
 .toggles.story .toggle .toggle-body{padding-top:18px}
+
+/* Contacto: desplegable de protección de datos a lo ancho de las dos columnas */
+.contact-data{grid-column:2 / 4;margin-top:10px}
+@media (max-width:989px){.contact-data{grid-column:auto}}

@@ -426,3 +426,6 @@ ul{margin:0 0 1em;padding-left:1.2em}
 /* Botón de WhatsApp de la portada: solo icono (al doble de tamaño) y número */
 .btn-wa{gap:10px}
 .btn-wa svg{width:30px;height:30px}
+
+/* Cabecera con capa negra al 20 % (Reuniones explicativas) */
+.page-hero.dim20::before{background:rgba(0,0,0,.2)}

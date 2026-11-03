@@ -43,10 +43,10 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .topbar .container{display:flex;justify-content:space-between}
 .header-main{background:linear-gradient(#fff,#f2f2f2);border-bottom:1px solid #e1e1e1;transition:all .3s}
 .header-main .container{display:flex;align-items:center;justify-content:space-between;height:118px;transition:height .3s}
-.logo img,.logo .img-ph{width:95px;height:95px;transition:all .3s}
+.logo img,.logo .img-ph{width:116px;height:116px;transition:all .3s}
 .logo .img-ph{border-radius:50%}
 .is-scrolled .header-main .container{height:58px}
-.is-scrolled .logo img,.is-scrolled .logo .img-ph{width:48px;height:48px}
+.is-scrolled .logo img,.is-scrolled .logo .img-ph{width:58px;height:58px}
 .is-scrolled .logo .img-ph span{display:none}
 
 .main-nav{display:flex;align-items:center;height:100%}

@@ -448,3 +448,13 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .contact-data{grid-column:2 / 4;margin-top:10px}
 @media (max-width:989px){.contact-data{grid-column:auto}}
 .contact-grid{row-gap:30px}
+
+/* Menú desplegable en móvil y tablet: letra algo mayor, página actual en azul claro
+   (también las de primer nivel) y texto blanco en el botón «Inscríbete» */
+@media (max-width:989px){
+  .main-nav.open>ul>li>a{font-size:16px;padding:13px 25px}
+  .main-nav.open .sub-menu a{font-size:14px;padding:10px 15px}
+  .main-nav.open>ul>li.current>a,
+  .main-nav.open .sub-menu li.current>a{color:var(--blue-light)!important;font-weight:700}
+  .main-nav.open>ul>li.nav-cta>a{color:#fff!important;font-size:15px;padding:11px 18px}
+}

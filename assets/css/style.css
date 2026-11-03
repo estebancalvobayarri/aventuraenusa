@@ -392,3 +392,13 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .home-hero::before{background:linear-gradient(90deg,rgba(16,28,56,.45) 0%,rgba(16,28,56,.15) 55%,rgba(16,28,56,0) 80%)}
 .page-hero h1,.page-hero h2,.home-hero h1,.home-hero h2{text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .header-transparent:not(.is-scrolled) .site-header{background:linear-gradient(rgba(16,28,56,.35),rgba(16,28,56,0))}
+
+/* Animación de entrada de los tres círculos de la portada (como en la web original).
+   Solo se activa si el JS está cargado (clase .js-reveal), así sin JS se ven siempre. */
+.js-reveal .icon-circles .icon-circle{opacity:0;transform:scale(.4)}
+.js-reveal .icon-circles.in-view .icon-circle{animation:circle-pop .7s cubic-bezier(.2,.9,.3,1.25) forwards}
+.js-reveal .icon-circles.in-view .cols>div:nth-child(2) .icon-circle{animation-delay:.25s}
+.js-reveal .icon-circles.in-view .cols>div:nth-child(3) .icon-circle{animation-delay:.5s}
+@keyframes circle-pop{0%{opacity:0;transform:scale(.4)}100%{opacity:1;transform:scale(1)}}
+.js-reveal .icon-circles.in-view .icon-circle:hover{transform:scale(1.04)}
+@media (prefers-reduced-motion:reduce){.js-reveal .icon-circles .icon-circle{opacity:1;transform:none;animation:none!important}}

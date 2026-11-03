@@ -14,6 +14,18 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Animación de entrada al hacer scroll ---------- */
+  var revealEls = document.querySelectorAll('.icon-circles');
+  if (revealEls.length && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.35 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
   /* ---------- Menú móvil ---------- */
   var nav = document.querySelector('.main-nav');
   var toggle = document.querySelector('.menu-toggle');

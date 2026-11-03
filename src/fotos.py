@@ -52,6 +52,8 @@ def main():
         w, h = kind(dest)
         # el waterfront también aparece en el carrusel: se deja sin recortar (sirve para ambos)
         if h:
+            if im.width < w:  # no ampliar fotos pequeñas: se recorta a la proporción con su tamaño real
+                w, h = im.width, round(im.width * h / w)
             im = ImageOps.fit(im.convert("RGB"), (w, h), Image.LANCZOS)
         else:
             if im.width > w:

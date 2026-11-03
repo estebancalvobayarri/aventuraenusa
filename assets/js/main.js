@@ -15,14 +15,14 @@
   onScroll();
 
   /* ---------- Animación de entrada al hacer scroll ---------- */
-  var revealEls = document.querySelectorAll('.icon-circles');
+  var revealEls = document.querySelectorAll('.icon-circles, .timeline .tl-item');
   if (revealEls.length && 'IntersectionObserver' in window) {
     document.documentElement.classList.add('js-reveal');
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
       });
-    }, { threshold: 0.35 });
+    }, { threshold: 0.35, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
   }
 

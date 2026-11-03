@@ -199,10 +199,10 @@ ul{margin:0 0 1em;padding-left:1.2em}
    Línea temporal (El día a día)
    -------------------------------------------------------------------------- */
 .timeline{position:relative;max-width:1210px;margin:40px auto 0}
-.tl-item{display:grid;grid-template-columns:1fr 82px 1fr;gap:0 64px;position:relative;padding-bottom:50px}
-.tl-item::before{content:"";position:absolute;left:50%;top:90px;bottom:10px;border-left:1px dashed #ddd}
+.tl-item{display:grid;grid-template-columns:1fr 90px 1fr;gap:0 64px;position:relative;padding-bottom:50px}
+.tl-item::before{content:"";position:absolute;left:50%;top:98px;bottom:10px;border-left:1px dashed #ddd}
 .tl-item:last-child::before{display:none}
-.tl-dot{width:82px;height:82px;border-radius:50%;background:#c4c4cf;display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:1}
+.tl-dot{width:90px;height:90px;border-radius:50%;background:var(--navy-dark);display:flex;align-items:center;justify-content:center;grid-column:2;grid-row:1}
 .tl-dot svg{width:26px;height:26px;fill:#fff}
 .tl-time{font-family:var(--font-head);font-size:28px;color:#bbb;padding-top:20px}
 .tl-content{padding-top:24px;color:var(--navy)}
@@ -407,3 +407,12 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .site-footer .f-credit{display:block;width:max-content;margin:35px 0 0 auto;opacity:.85;transition:opacity .2s}
 .site-footer .f-credit:hover{opacity:1}
 .site-footer .f-credit img{height:16px;width:auto}
+
+/* Horario (El día a día): cada franja aparece al llegar a ella, como en la web original.
+   El círculo pasa de gris claro al azul marino mientras la franja se funde. */
+.js-reveal .timeline .tl-item{opacity:0}
+.js-reveal .timeline .tl-dot{background:#c4c4cf;transition:background-color 1.2s ease-out .3s}
+.js-reveal .timeline .tl-item.in-view{animation:tl-fadein 1.5s ease-out forwards}
+.js-reveal .timeline .tl-item.in-view .tl-dot{background:var(--navy-dark)}
+@keyframes tl-fadein{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.js-reveal .timeline .tl-item{opacity:1;animation:none!important}.js-reveal .timeline .tl-dot{background:var(--navy-dark);transition:none}}

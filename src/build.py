@@ -26,7 +26,11 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 PAGES = SRC / "pages"
 SITE = "https://aventuraenusa.es"
-BUILD_VERSION = datetime.date.today().strftime("%Y%m%d")
+import hashlib
+# Versión de CSS/JS = huella de su contenido: cambia en cuanto se modifican,
+# así los navegadores no se quedan con una copia antigua.
+BUILD_VERSION = hashlib.md5(b"".join((Path(__file__).resolve().parent.parent / f).read_bytes()
+                                     for f in ("assets/css/style.css", "assets/js/main.js"))).hexdigest()[:10]
 # Prefijo de ruta. Vacío cuando la web se sirve en la raíz del dominio
 # (aventuraenusa.es). Para la vista previa en
 # https://<usuario>.github.io/aventuraenusa/ se usa BASE_PATH=/aventuraenusa

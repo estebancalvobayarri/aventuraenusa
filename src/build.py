@@ -282,11 +282,10 @@ def footer_html():
         <span>Para la correcta visualización, debe aceptar las cookies.</span>
         <button type="button" data-accept-cookies>Aceptar y mostrar el mapa</button>
       </div>
-      <a class="f-credit" href="https://ecwebdesign.es/" target="_blank" rel="noopener"><img src="/assets/img/ecwebdesign.png" alt="Diseño y web: EC Web Design" width="125" height="16"></a>
     </section>
   </div>
 </footer>
-<div class="socket"><div class="container">© Copyright {year} - Aventura en USA · Move Abroad Experience S.L.</div></div>
+<div class="socket"><div class="container"><span>© Copyright {year} - Aventura en USA · Move Abroad Experience S.L.</span><a class="f-credit" href="https://ecwebdesign.es/" target="_blank" rel="noopener"><img src="/assets/img/ecwebdesign.png" alt="Diseño y web: EC Web Design" width="94" height="12"></a></div></div>
 <a class="to-top" href="#top" aria-label="Volver arriba">{icon("up")}</a>
 <button class="cookie-lock" type="button" aria-label="Configuración de cookies">{icon("lock")}</button>
 <div class="cookie-bar" role="dialog" aria-label="Aviso de cookies">

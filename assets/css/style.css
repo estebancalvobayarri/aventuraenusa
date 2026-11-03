@@ -409,10 +409,11 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .js-reveal .icon-circles.in-view .icon-circle:hover{transform:scale(1.04)}
 @media (prefers-reduced-motion:reduce){.js-reveal .icon-circles .icon-circle{opacity:1;transform:none;animation:none!important}}
 
-/* Crédito del diseño web en el pie */
-.site-footer .f-credit{display:block;width:max-content;margin:35px 0 0 auto;opacity:.85;transition:opacity .2s}
-.site-footer .f-credit:hover{opacity:1}
-.site-footer .f-credit img{height:16px;width:auto}
+/* Crédito del diseño web en la franja inferior (socket), a la derecha */
+.socket .container{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.socket .f-credit{display:block;opacity:.85;transition:opacity .2s;line-height:0}
+.socket .f-credit:hover{opacity:1}
+.socket .f-credit img{height:12px;width:auto}
 
 /* Horario (El día a día): cada franja aparece al llegar a ella, como en la web original.
    El círculo pasa de gris claro al azul marino mientras la franja se funde. */

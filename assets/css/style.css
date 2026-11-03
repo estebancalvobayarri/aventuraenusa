@@ -429,3 +429,12 @@ ul{margin:0 0 1em;padding-left:1.2em}
 
 /* Cabecera con capa negra al 20 % (Reuniones explicativas) */
 .page-hero.dim20::before{background:rgba(0,0,0,.2)}
+
+/* Contacto: consentimientos, pregunta de seguridad y botón en la columna derecha (donde estaba el mapa) */
+.contact-consents{margin-top:10px;padding-top:25px;border-top:1px solid var(--border)}
+.contact-consents .form-check{font-size:14px;line-height:1.55;margin-bottom:18px}
+.contact-consents .form-check input{margin-top:4px;flex:0 0 auto}
+.contact-consents .form-field{margin-bottom:18px}
+.contact-consents .form-field label{font-size:14px}
+.contact-consents .form-field input{max-width:308px}
+.contact-consents .btn{width:auto;margin-bottom:0}

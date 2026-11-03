@@ -22,10 +22,6 @@
         <div class="form-field"><label for="f-email">Correo electrónico <abbr title="obligatorio">*</abbr></label><input id="f-email" type="email" name="email" required autocomplete="email"></div>
         <div class="form-field"><label for="f-asunto">Asunto <abbr title="obligatorio">*</abbr></label><input id="f-asunto" type="text" name="Asunto" required></div>
         <div class="form-field"><label for="f-msg">Mensaje <abbr title="obligatorio">*</abbr></label><textarea id="f-msg" name="Mensaje" required></textarea></div>
-        <label class="form-check"><input type="checkbox" name="Consentimiento privacidad" value="Sí" required><span>✓ Consiento el uso de mis datos para los fines indicados en la <a href="/politica-de-privacidad/">política de privacidad</a> <abbr title="obligatorio" style="color:var(--blue);text-decoration:none">*</abbr></span></label>
-        <label class="form-check"><input type="checkbox" name="Consentimiento publicidad" value="Sí"><span>✉ Consiento el uso de mis datos personales para recibir publicidad de su entidad.</span></label>
-        <div class="form-field"><label for="f-verif">Para mayor seguridad, responde la siguiente pregunta <abbr title="obligatorio">*</abbr></label><input id="f-verif" type="text" name="verificacion" placeholder="1 + 4 = ?" required inputmode="numeric"></div>
-        <button class="btn" type="submit" style="padding:16px 48px">Enviar</button>
       </form>
 
       <div class="toggles boxed blue-title" style="margin-top:40px">
@@ -53,9 +49,11 @@
       </ul>
       <a class="btn btn-green" href="https://api.whatsapp.com/send?phone=34672852975" target="_blank" rel="noopener">{{icon:whatsapp}} Whatsapp (+34) 672 852 975</a>
       <a class="btn" href="tel:+34672852975">{{icon:phone}} Llamar (+34) 672 852 975</a>
-      <div class="map-consent" style="height:300px" data-map-src="https://maps.google.com/maps?q=Valencia%2C%20Espa%C3%B1a&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
-        <span>Para la correcta visualización, debe aceptar las cookies.</span>
-        <button type="button" data-accept-cookies>Aceptar y mostrar el mapa</button>
+      <div class="contact-consents">
+        <label class="form-check"><input type="checkbox" form="contact-form" name="Consentimiento privacidad" value="Sí" required><span>✓ Consiento el uso de mis datos para los fines indicados en la <a href="/politica-de-privacidad/">política de privacidad</a> <abbr title="obligatorio" style="color:var(--blue);text-decoration:none">*</abbr></span></label>
+        <label class="form-check"><input type="checkbox" form="contact-form" name="Consentimiento publicidad" value="Sí"><span>✉ Consiento el uso de mis datos personales para recibir publicidad de su entidad.</span></label>
+        <div class="form-field"><label for="f-verif">Para mayor seguridad, responde la siguiente pregunta <abbr title="obligatorio">*</abbr></label><input id="f-verif" type="text" form="contact-form" name="verificacion" placeholder="1 + 4 = ?" required inputmode="numeric"></div>
+        <button class="btn" type="submit" form="contact-form" style="padding:16px 48px">Enviar</button>
       </div>
     </div>
   </div>

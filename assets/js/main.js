@@ -159,14 +159,14 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       msg.className = 'form-msg';
-      var answer = form.querySelector('[name="verificacion"]').value.trim();
+      var answer = form.elements['verificacion'].value.trim();
       if (answer !== '5') {
         msg.textContent = 'La respuesta a la pregunta de seguridad no es correcta.';
         msg.classList.add('err');
         return;
       }
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      var btn = form.querySelector('[type="submit"]');
+      var btn = document.querySelector('[type="submit"][form="contact-form"]') || form.querySelector('[type="submit"]');
       btn.disabled = true; btn.textContent = 'Enviando…';
       var data = new FormData(form);
       data.delete('verificacion');

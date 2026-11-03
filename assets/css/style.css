@@ -379,12 +379,16 @@ ul{margin:0 0 1em;padding-left:1.2em}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 
 /* Inscripción: pasos numerados con captura */
-/* Mismo ancho que la web original: textos y capturas a todo el ancho del contenedor, sin numeración */
-.step-list{list-style:none;padding:0;margin:0}
-.step-list>li{padding:0 0 30px;color:var(--navy)}
+/* Inscripción: pasos numerados con el número fuera de la columna de texto.
+   Texto y capturas algo más estrechos que el contenedor, alineados entre sí. */
+.steps-intro,.step-list,.steps-outro{max-width:1040px;margin-left:auto;margin-right:auto;padding-left:60px}
+.step-list{list-style:none;counter-reset:paso;margin-top:10px;margin-bottom:0}
+.step-list>li{counter-increment:paso;position:relative;padding:0 0 40px;color:var(--navy)}
+.step-list>li::before{content:counter(paso);position:absolute;left:-60px;top:-6px;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font-family:var(--font-head);font-size:18px;display:flex;align-items:center;justify-content:center}
 .step-list img,.step-list .img-ph{width:100%;border-radius:3px;margin-top:6px}
 .steps-intro p,.steps-outro p{color:var(--navy)}
 .steps .section-title{margin-bottom:50px}
+@media (max-width:600px){.steps-intro,.steps-outro{padding-left:0}.step-list{padding-left:48px}.step-list>li::before{left:-48px;width:34px;height:34px;font-size:16px}}
 /* Subrayado amarillo como en la web original */
 .text-hl.mark{background:#ffff00;color:var(--blue);box-decoration-break:clone;-webkit-box-decoration-break:clone}
 

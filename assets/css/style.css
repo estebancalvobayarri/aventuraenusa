@@ -461,6 +461,6 @@ ul{margin:0 0 1em;padding-left:1.2em}
 }
 
 /* Logo blanco en el pie, bajo el mapa */
-.site-footer .f-logo{display:block;width:120px;margin:35px auto 0;opacity:.95;transition:opacity .2s}
+.site-footer .f-logo{display:block;width:120px;margin:35px 0 0 auto;opacity:.95;transition:opacity .2s}
 .site-footer .f-logo:hover{opacity:1}
 .site-footer .f-logo img{width:120px;height:120px}

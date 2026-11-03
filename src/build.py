@@ -282,6 +282,7 @@ def footer_html():
         <span>Para la correcta visualización, debe aceptar las cookies.</span>
         <button type="button" data-accept-cookies>Aceptar y mostrar el mapa</button>
       </div>
+      <a class="f-logo" href="/" aria-label="Aventura en USA - Inicio"><img src="/assets/img/logo-blanco.png" alt="Aventura en USA" width="120" height="120" loading="lazy"></a>
     </section>
   </div>
 </footer>

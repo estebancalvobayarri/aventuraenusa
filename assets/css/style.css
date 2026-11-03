@@ -108,7 +108,7 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .page-hero .hero-inner{position:relative;z-index:2;padding:0 20px}
 
 /* Hero portada */
-.home-hero{min-height:min(100vh,1000px);display:flex;align-items:center;background-size:cover;background-position:center;position:relative}
+.home-hero{min-height:min(100vh,1000px);display:flex;align-items:center;background-size:cover;background-position:center top;position:relative}
 .home-hero .container{width:100%;position:relative;z-index:2}
 .home-hero .hero-text{max-width:60%;padding-top:90px}
 .home-hero h1{color:#fff;font-size:34px;font-weight:300;letter-spacing:1px;margin-bottom:60px}

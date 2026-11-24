@@ -467,3 +467,22 @@ ul{margin:0 0 1em;padding-left:1.2em}
 
 /* Logo blanco del pie centrado en móvil y tablet */
 @media (max-width:989px){.site-footer .f-logo{margin:35px auto 0}}
+
+/* Portada: reseñas de Google */
+.g-reviews .section-title{margin-bottom:20px}
+.g-summary{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:45px;color:var(--navy)}
+.g-score{font-family:var(--font-head);font-size:52px;line-height:1;color:var(--navy)}
+.g-summary-txt{display:flex;flex-direction:column;gap:4px;font-size:15px;text-align:left}
+.g-stars{color:#fbbc04;letter-spacing:2px;font-size:16px;line-height:1}
+.g-stars-lg{font-size:24px}
+.g-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.g-review{background:#fff;border:1px solid #e6eef3;border-radius:3px;padding:24px 24px 18px;display:flex;flex-direction:column;gap:14px;color:var(--navy)}
+.g-review header{display:flex;align-items:center;gap:12px}
+.g-review header div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.g-avatar{flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--font-head);font-size:19px;display:flex;align-items:center;justify-content:center}
+.g-name{font-weight:700;font-size:15px}
+.g-review p{margin:0;font-size:15px;line-height:1.6;flex:1}
+.g-review footer{font-size:12px;color:var(--muted)}
+.g-actions{text-align:center;margin:45px 0 0;display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+@media (max-width:989px){.g-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.g-grid{grid-template-columns:1fr}.g-score{font-size:44px}}

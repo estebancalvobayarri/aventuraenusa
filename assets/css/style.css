@@ -509,3 +509,10 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .g-more:hover{text-decoration:underline}
 .g-track{align-items:flex-start}
 .g-track .g-review{min-height:100%}
+
+/* Iniciales de las reseñas en colores alternos de la paleta (azul corporativo, rojo bandera, azul claro, azul marino, verde) */
+.g-track .g-review:nth-child(5n+1) .g-avatar{background:#154579}
+.g-track .g-review:nth-child(5n+2) .g-avatar{background:#c8102e}
+.g-track .g-review:nth-child(5n+3) .g-avatar{background:#1194db}
+.g-track .g-review:nth-child(5n+4) .g-avatar{background:#30305b}
+.g-track .g-review:nth-child(5n+5) .g-avatar{background:#178740}

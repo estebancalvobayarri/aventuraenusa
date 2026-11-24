@@ -46,3 +46,10 @@ jobs:
           path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+      # Reintento automático si GitHub falla de forma temporal al publicar
+      - if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4

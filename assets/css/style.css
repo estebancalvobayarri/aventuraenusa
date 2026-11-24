@@ -486,3 +486,26 @@ ul{margin:0 0 1em;padding-left:1.2em}
 .g-actions{text-align:center;margin:45px 0 0;display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
 @media (max-width:989px){.g-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.g-grid{grid-template-columns:1fr}.g-score{font-size:44px}}
+
+/* Reseñas de Google en carrusel: 3 por vista en ordenador, 2 en tableta, 1 en móvil */
+.g-carousel{position:relative;padding:0 56px}
+.g-track{display:flex;gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 8px}
+.g-track::-webkit-scrollbar{display:none}
+.g-track:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.g-track .g-review{flex:0 0 calc((100% - 60px)/3);scroll-snap-align:start}
+.g-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid #d6e3ea;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s}
+.g-arrow:hover{background:var(--navy);border-color:var(--navy)}
+.g-arrow svg{width:18px;height:18px;fill:var(--navy)}
+.g-arrow:hover svg{fill:#fff}
+.g-prev{left:0}.g-next{right:0}
+@media (max-width:989px){.g-track .g-review{flex-basis:calc((100% - 30px)/2)}}
+@media (max-width:600px){.g-carousel{padding:0}.g-track{gap:16px}.g-track .g-review{flex-basis:88%}.g-arrow{display:none}}
+/* El título con línea de la portada puede partirse en varias líneas en pantallas estrechas */
+.heading-line h2{flex:0 1 auto;min-width:0}
+/* Reseñas largas: se recortan a 8 líneas con «Leer más» para que las tarjetas tengan altura similar */
+.g-review p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:8;line-clamp:8;overflow:hidden}
+.g-review.open p{display:block;-webkit-line-clamp:unset;overflow:visible}
+.g-more{align-self:flex-start;background:none;border:0;padding:0;color:var(--blue);font-weight:700;font-size:14px;cursor:pointer}
+.g-more:hover{text-decoration:underline}
+.g-track{align-items:flex-start}
+.g-track .g-review{min-height:100%}

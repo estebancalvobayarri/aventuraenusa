@@ -77,6 +77,36 @@
     restart();
   });
 
+  /* ---------- Carrusel de reseñas de Google ---------- */
+  document.querySelectorAll('[data-gcarousel]').forEach(function (car) {
+    var track = car.querySelector('.g-track');
+    // «Leer más» solo en las reseñas que no caben en 8 líneas
+    track.querySelectorAll('.g-review').forEach(function (r) {
+      var p = r.querySelector('p');
+      if (p.scrollHeight <= p.clientHeight + 2) return;
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'g-more'; b.textContent = 'Leer más'; b.setAttribute('aria-expanded', 'false');
+      b.addEventListener('click', function () {
+        var open = r.classList.toggle('open');
+        b.textContent = open ? 'Leer menos' : 'Leer más';
+        b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      p.after(b);
+    });
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function step() { var c = track.querySelector('.g-review'); return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 30) : track.clientWidth; }
+    function atEnd() { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 5; }
+    function next() { if (atEnd()) track.scrollTo({ left: 0 }); else track.scrollBy({ left: step() }); }
+    function prev() { if (track.scrollLeft <= 5) track.scrollTo({ left: track.scrollWidth }); else track.scrollBy({ left: -step() }); }
+    car.querySelector('.g-next').addEventListener('click', function () { next(); restart(); });
+    car.querySelector('.g-prev').addEventListener('click', function () { prev(); restart(); });
+    var timer = null, paused = false;
+    function restart() { if (reduce) return; clearInterval(timer); timer = setInterval(function () { if (!paused) next(); }, 7000); }
+    ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { car.addEventListener(ev, function () { paused = true; }, { passive: true }); });
+    ['mouseleave', 'focusout'].forEach(function (ev) { car.addEventListener(ev, function () { paused = false; }); });
+    restart();
+  });
+
   /* ---------- Cookies: solo técnicas por defecto; mapas tras aceptar ---------- */
   var KEY = 'aeu_cookie_consent';
   function getConsent() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
